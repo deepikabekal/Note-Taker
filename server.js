@@ -11,6 +11,12 @@ const PORT = process.env.PORT || 3001;
 //creating a static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+//API Routes
+app.use('/api/notes', require('./routes/apiroutes'));
+
+//body parser middleware
+app.use(express.json()); 
+app.use(express.urlencoded({extended: true}));
 
 //make the server listen
 app.listen (PORT, () => {
