@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/deepikabekal/Note-Taker/issues"
   },
-  "homepage": "https://github.com/deepikabekal/Note-Taker#readme"
+  "homepage": "https://github.com/deepikabekal/Note-Taker#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
