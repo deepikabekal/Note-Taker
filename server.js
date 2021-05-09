@@ -5,18 +5,21 @@ const path = require ('path');
 //instantiate server
 const app = express();
 
-//declare PORT
-const PORT = process.env.PORT || 3001;
-
 //creating a static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 //API Routes
-app.use('/api/notes', require('./routes/apiroutes'));
+app.use('/api', require('./routes/api_routes'));
+
+//html routes
+app.use('/', require("./routes/html_routes"));
 
 //body parser middleware
 app.use(express.json()); 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
+
+//declare PORT
+const PORT = process.env.PORT || 3001;
 
 //make the server listen
 app.listen (PORT, () => {
