@@ -16,7 +16,7 @@ app.use('/', require("./routes/html_routes"));
 
 //body parser middleware
 app.use(express.json()); 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: true }));
 
 //declare PORT
 const PORT = process.env.PORT || 3001;

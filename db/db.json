@@ -1,1 +1,10 @@
-[{"title":"Test Title","text":"Test text"}]
+{
+  "data": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "1"
+    },
+    null
+  ]
+}
