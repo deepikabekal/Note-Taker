@@ -9,7 +9,7 @@ An application that can be used to write and save notes. This application will u
 https://note-taker-21.herokuapp.com/
 
 ## Screenshot
-<img src="public/assets/images/note-taker.gif" width=150 height = 150>
+<img src="public/assets/images/note-taker.gif" width=600 height = 600>
 
 ## Technologies Used
 * HTML
