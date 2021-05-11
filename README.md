@@ -6,7 +6,7 @@
 An application that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
 ## Website
-https://deepikabekal.github.io/Work-Day-Scheduler/
+https://note-taker-21.herokuapp.com/
 
 ## Screenshot
 <img src="public/assets/images/note-taker.gif" width=150 height = 150>
