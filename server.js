@@ -4,8 +4,8 @@ const app = express(); //instantiate server
 
 //declaring variables
 const PORT = process.env.PORT || 80;
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/api_Routes');
+const htmlRoutes = require('./routes/html_Routes');
 
 //body parser middleware
 app.use(express.urlencoded({ extended: true }));
