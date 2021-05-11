@@ -1,28 +1,24 @@
 //import packages
-const express = require ('express');
-const path = require ('path');
+const express = require('express');
+const app = express(); //instantiate server
 
-//instantiate server
-const app = express();
-
-//creating a static folder
-app.use(express.static('public'));
-
-//API Routes
-app.use('/api', require('./routes/api_routes'));
-
-//html routes
-app.use('/', require("./routes/html_routes"));
+//declaring variables
+const PORT = process.env.PORT || 80;
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 //body parser middleware
-app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-//declare PORT
-const PORT = process.env.PORT || 3001;
+//creating a static folder
+app.use(express.static('public')); 
+
+
+app.use('/api', apiRoutes); //API Routes
+app.use('/', htmlRoutes); //html routes
 
 //make the server listen
-app.listen (PORT, () => {
-    console.log("Server is now on PORT 3001!");
-});
-
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
